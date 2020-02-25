@@ -1,0 +1,12 @@
+<h1> Make a new Booking <%=@flat.name %></h1>
+<div class="container">
+  <div class= "row justify-content-around">
+    <div class="col-6">
+      <%= simple_form_for [@flat, @booking] do |f| %>
+        <%= f.input :date_from %>
+        <%= f.input :date_to %>
+        <%= f.submit "Make a booking", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
 
 puts "Cleaning db"
 Booking.destroy_all
@@ -20,6 +16,7 @@ puts "Creating bookings"
 booking1 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:user1, flat:flat1)
 booking2 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:user2, flat:flat2)
 booking3 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:user3, flat:flat3)
+
 
 
 
