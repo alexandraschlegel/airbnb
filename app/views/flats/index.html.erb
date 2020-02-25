@@ -1,6 +1,5 @@
 <h1>All your monuments - just one click away!</h1>
 
-
 <div class="">
   <div class="d-flex flex-row">
     <% @flats.each do |flat| %>
@@ -21,3 +20,8 @@
     <% end %>
   </div>
 </div>
+
+<%= link_to "Show Details", flat_path(flat) %>
+
+<%= link_to 'logout', destroy_user_session_path, method: :delete %>
+
