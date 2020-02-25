@@ -35,6 +35,7 @@ class FlatsController < ApplicationController
   private
   def flats_params
     params.require(:flat).permit(:address, :price, :capacity)
+
   end
 
 
