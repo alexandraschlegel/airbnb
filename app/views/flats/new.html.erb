@@ -2,11 +2,11 @@
   <div class= "row justify-content-around">
     <div class="col-6">
       <%= simple_form_for(flat) do |f| %>
-        <%= f.input :address %>
-        <%= f.input :capacity %>
-        <%= f.input :price %>
-        <%= f.input :rating %>
-        <%= f.input :facilities %>
+        <p><strong>Address:</strong><%= f.input :address %>
+        <p><strong>Capacity:</strong> <%= f.input :capacity %>
+        <p><strong>Price:</strong><%= f.input :price %>
+        <p><strong>Rating:</strong><%= f.input :rating %>
+        <p><strong>Facilities:</strong><%= f.input :facilities %>
        <%= f.submit "Add a new flat", class: "btn btn-primary"  %>
       <% end %>
     </div>

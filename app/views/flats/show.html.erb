@@ -1,7 +1,10 @@
-<h1><%= @flat.address %></h1>
-<p><%= @flat.price %></p>
-<p><%= @flat.rating %></p>
-<p><%= @flat.capacity %></p>
-<p><%= @flat.facilities %></p>
+<h1> Flat View</h1>
+
+<p><strong>Address:</strong><%= @flat.address  %>
+<p><strong>Capacity:</strong> <%= @flat.capacity %>
+<p><strong>Price:</strong><%=@flat.price %>
+<p><strong>Facilities:</strong><%= @flat.facilities%>
+<p><strong>Rating:</strong><%= @flat.rating %>
+
 
 <%= link_to "Go back to all flats", flats_path %>
