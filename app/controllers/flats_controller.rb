@@ -1,9 +1,7 @@
 class FlatsController < ApplicationController
 
   def index
-  end
-
-  def show
+    @flats = Flat.all
   end
 
 
