@@ -1,16 +1,5 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<%= simple_form_for :search, url: root_path, method: "GET", html:{
-  class: 'form-in-line'} do |f| %>
-<%= f.input :address %>
 
-<%= simple_form_for (@flat) %>
-<%= f.input :capacity, collection %>
-<%= f.input date_from %> <%= f.input date_to %>
-<%= f.input price %>
-<%= f.input rating #optional %>
-<%= f.input facitilies #optional %>
-<%= f.submit "Search", class: "btn btn-primary"%>
-<% end %>
 
-<%= link_to 'search flats', to: flats_path  %>
+<%= link_to 'search flats', flats_path  %>

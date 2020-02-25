@@ -1,9 +1,9 @@
-<h1> hey this page should display all the flats </h1>
+<h1> All flats</h1>
  <p><% @flats.each do |flat| %> </p>
- <p><%= flat.rating %></p>
- <p><%= flat.price %></p>
- <p><%= flat.location %></p>
- <p><%= flat.capacity %></p>
+ <p><strong>Flat address: </strong><%= flat.address %></p>
+ <p><strong>Flat capacity:</strong> <%= flat.capacity %></p>
+ <p><strong>Flat price:</strong> <%= flat.price %></p>
+ <p><strong>Flat rating:</strong> <%= flat.rating %></p>
 
 <%= link_to "Show Details", flat_path(flat) %>
 <% end %>
