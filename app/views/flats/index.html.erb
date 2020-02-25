@@ -1,9 +1,23 @@
-<h1>All flats</h1>
-  <% @flats.each do |flat| %>
-    <p><strong>Flat address: </strong><%= flat.address %></p>
-    <p><strong>Flat capacity:</strong><%= flat.capacity %></p>
-    <p><strong>Flat price:</strong><%= flat.price %></p>
-    <p><strong>Flat rating:</strong><%= flat.rating %></p>
+<h1>All your monuments - just one click away!</h1>
 
-    <%= link_to "View flats", flat_path(flat) %>
-  <% end %>
+
+<div class="">
+  <div class="d-flex flex-row">
+    <% @flats.each do |flat| %>
+    <div class="card-trip m-3">
+      <%= image_tag "flamingo.jpg", alt: "Bolivian Salt Desert", width: 200%>
+      <div class="card-trip-infos">
+        <div>
+          <h2><strong>Flat address: </strong><%= flat.address %></h2>
+          <p><strong>Flat capacity:</strong><%= flat.capacity %></p>
+          <p class="card-trip-pricing"><strong>Flat price:</strong><%= flat.price %></p>
+          <p><strong>Flat rating:</strong><%= flat.rating %></p>
+
+          <%= link_to "View flats", flat_path(flat) %>
+        </div>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
