@@ -1,5 +1,5 @@
 <h1> Flat View</h1>
-
+<%= image_tag "flatone.jpg",class: "image", alt: "alttext" %>
 <p><strong>Address:</strong><%= @flat.address  %>
 <p><strong>Capacity:</strong> <%= @flat.capacity %>
 <p><strong>Price:</strong><%=@flat.price %>
@@ -9,3 +9,5 @@
 
 <%= link_to "Go back to all flats |", flats_path %>
 <%= link_to "New booking", new_flat_booking_path(@flat.id) %>
+
+<!--picture of the flat and info
