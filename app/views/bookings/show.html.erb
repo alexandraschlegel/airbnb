@@ -1,0 +1,11 @@
+<h1> Your booking details</h1>
+
+<p><strong>Check-in date:</strong><%= @booking.date_from  %>
+<p><strong>Check-out date:</strong> <%= @booking.date_to %>
+<p><strong>Flat Address:</strong> <%= @flat.address %>
+<p><strong>Price:</strong> <%= @flat.price %>
+
+
+<%= link_to "Go back to all flats", flats_path %>
+<%= link_to "Edit booking",  edit_flat_booking_path(flat, booking) %>
+
