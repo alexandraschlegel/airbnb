@@ -1,9 +1,9 @@
-<h1> All flats</h1>
- <p><% @flats.each do |flat| %> </p>
- <p><strong>Flat address: </strong><%= flat.address %></p>
- <p><strong>Flat capacity:</strong> <%= flat.capacity %></p>
- <p><strong>Flat price:</strong> <%= flat.price %></p>
- <p><strong>Flat rating:</strong> <%= flat.rating %></p>
+<h1>All flats</h1>
+  <% @flats.each do |flat| %>
+    <p><strong>Flat address: </strong><%= flat.address %></p>
+    <p><strong>Flat capacity:</strong><%= flat.capacity %></p>
+    <p><strong>Flat price:</strong><%= flat.price %></p>
+    <p><strong>Flat rating:</strong><%= flat.rating %></p>
 
-<%= link_to "Show Details", flat_path(flat) %>
-<% end %>
+    <%= link_to "View flats", flat_path(flat) %>
+  <% end %>

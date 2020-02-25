@@ -8,12 +8,8 @@ puts "Creating users"
 elizabeth = User.create!(email: "elizabeth@gmail.com", password: 123456)
 henry = User.create!(email: "henry's@gmail.com", password:1234567)
 charles = User.create!(email: "emperorpalpatine@gmail.com",password: 12345678)
-prometheus =User.create!(email:"10stepsaheadofyou@gmail.com",password:123456789)
+prometheus = User.create!(email:"10stepsaheadofyou@gmail.com",password:123456789)
 wilder = User.create!(email:"tookaloss@gmail.com",password:12345678910)
-
-
-
-
 puts "Creating flats"
 flat1 = Flat.create!(address:'The Royal Albert Hall',rating:10,price:400,capacity:450,facilities:'has a shower, has a bathroom,nothing too spectacular!', user:elizabeth)
 flat2 = Flat.create!(address:'Kensington Palace',rating:6,price:500000,capacity:800,facilities:'a underground basement to do some sketchy stuff', user:henry)
@@ -36,12 +32,10 @@ flat17 = Flat.create!(address:'Lake Como, 5585 Unternberg',rating:8,price:1200,c
 flat18 = Flat.create!(address:'Lake titicaca, 5585 Unternberg',rating:8,price:400000,capacity:1000,facilities:'door of swatches,swing set table', user:wilder)
 flat19 = Flat.create!(address:'Eiffel Tower, 5585 Unternberg',rating:2,price:1200,capacity:1000,facilities:'ice cave,fire-pit table', user:wilder)
 flat20 = Flat.create!(address:'Statue of Liberty, 5585 Unternberg',rating:2,price:1200,capacity:1000,facilities:'indoor-slide, ping-pong table', user:prometheus)
-
-
 puts "Creating bookings"
-booking1 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:Elizabeth, flat:flat1)
-booking2 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:Henry, flat:flat2)
-booking3 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:Charles, flat:flat3)
+booking1 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:elizabeth, flat:flat1)
+booking2 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:henry, flat:flat2)
+booking3 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:charles, flat:flat3)
 
 
 
