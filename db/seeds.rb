@@ -39,9 +39,9 @@ flat20 = Flat.create!(address:'Statue of Liberty, 5585 Unternberg',rating:2,pric
 
 
 puts "Creating bookings"
-booking1 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:Elizabeth, flat:flat1)
-booking2 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:Henry, flat:flat2)
-booking3 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:Charles, flat:flat3)
+booking1 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:elizabeth, flat:flat1)
+booking2 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:henry, flat:flat2)
+booking3 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:charles, flat:flat3)
 
 
 
