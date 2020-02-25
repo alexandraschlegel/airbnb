@@ -1,0 +1,14 @@
+<div class="container">
+  <div class= "row justify-content-around">
+    <div class="col-6">
+      <%= simple_form_for(flat) do |f| %>
+        <%= f.input :address %>
+        <%= f.input :capacity %>
+        <%= f.input :price %>
+        <%= f.input :rating %>
+        <%= f.input :facilities %>
+       <%= f.submit "Add a new flat", class: "btn btn-primary"  %>
+      <% end %>
+    </div>
+  </div>
+</div>
