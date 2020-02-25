@@ -1,8 +1,8 @@
-<h1> Edit your booking <%=@flat.id %></h1>
+<h1> Edit your booking <%=@booking.id %></h1>
   <div class="container">
     <div class= "row justify-content-around">
       <div class="col-6">
-       <%= simple_form_for(@flat, @booking) do |f| %>
+       <%= simple_form_for([@flat, @booking]) do |f| %>
         <p><strong>Change dates:</strong> <%= f.input :date_from %>
         <p><strong>Change dates:</strong> <%= f.input :date_to %>
        <%= f.submit "Edit booking", class: "btn btn-primary"  %>
