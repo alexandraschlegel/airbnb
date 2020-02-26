@@ -1,7 +1,12 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('flamingo.jpg')>
-  <div class= "container" >
+<div class="banner" >
+  <div class="container">
     <h1><strong> My Monuments  </strong> </h1>
     <p> <strong>Stay in your dream locations- you're worth it!</strong></p>
+
+    <%= link_to 'All flats', flats_path, class: "btn btn-primary  rounded pl-3 pr-3"   %>
+  </div>
+</div>
+
     <%#= simple_form_for :search, url: root_path, method: :get do |f| %>
       <!--<div class="search-form-control form-group container">
         <input class="form-control string required" type="text" name="search[query]" id="search_query" />
@@ -10,9 +15,6 @@
         </button>
       </div> -->
     <%# end %>
-    <%= link_to 'All flats', flats_path, class: "btn btn-flat"  %>
-  </div>
-</div>
 
 
 

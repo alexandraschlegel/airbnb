@@ -1,11 +1,24 @@
-<h1> Your booking details</h1>
+  <div class="t-cardWrap">
+    <div class="t-card t-cardLeft">
+      <h1>Your Monument Booking Ticket</h1>
+      <div class="t-title">
+        <h2><%= @flat.address %></h2>
+        <span>Address</span>
+      </div>
+      <div class="t-name">
+        <h2><%= current_user.email %></h2>
+        <span>Email</span>
+      </div>
 
-<p><strong>Check-in date:</strong><%= @booking.date_from  %>
-<p><strong>Check-out date:</strong> <%= @booking.date_to %>
-<p><strong>Flat Address:</strong> <%= @flat.address %>
-<p><strong>Price:</strong> <%= @flat.price %>
+    </div>
+    <div class="t-card t-cardRight">
+      <div class="t-number">
+        <%= @booking.date_from %>
+        <span></span>
+      </div>
+      <div class="t-barcode"></div>
+    </div>
 
-
-<%= link_to "Go back to all flats", flats_path %>
-<%= link_to "Edit booking",  edit_flat_booking_path(@flat, @booking) %>
-
+  <%= link_to "Go back to all flats", flats_path, class: "btn btn-primary rounded mt-5"%>
+  <%= link_to "Edit booking",  edit_flat_booking_path(@flat, @booking) , class: "btn btn-primary rounded mt-5"%>
+  </div>
