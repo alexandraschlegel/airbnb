@@ -1,13 +1,28 @@
-<h1> Flat View</h1>
-<%= image_tag "flatone.jpg",class: "image", alt: "alttext" %>
-<p><strong>Address:</strong><%= @flat.address  %>
-<p><strong>Capacity:</strong> <%= @flat.capacity %>
-<p><strong>Price:</strong><%=@flat.price %>
-<p><strong>Facilities:</strong><%= @flat.facilities%>
-<p><strong>Rating:</strong><%= @flat.rating %>
 
 
-<%= link_to "Go back to all flats |", flats_path %>
-<%= link_to "New booking", new_flat_booking_path(@flat.id) %>
+<div class="usercontainer">
 
-<!--picture of the flat and info
+  <div class="card" style="width: 40rem;">
+
+    <%= image_tag "flatone.jpg",class: "card-img-top", alt: "alttext" %>
+    <div class="card-body">
+      <h5 class="card-title">Flat details</h5>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
+      <p><strong>Address:</strong><%= @flat.address %>
+      <p><strong>Capacity:</strong><%= @flat.capacity %>
+      <p><strong>Price:</strong><%= @flat.price %>
+      <p><strong>Facilities:</strong><%= @flat.facilities%>
+      <p><strong>Rating</strong><%= @flat.rating %>
+      <a href="#" class="btn btn-primary"><%= link_to "Go back to all flats |", flats_path %></a>
+      <a href="#" class="btn btn-primary"><%= link_to "New booking", new_flat_booking_path(@flat.id) %>
+    </div>
+  </div>
+</div>
+
+<
+<div class="footer">
+  <div class="footer-links">
+    <a class="btn btn-ghost" href="#">Add Dates</a>
+  </div>
+
+</div>
