@@ -1,7 +1,5 @@
-
 <div >
   <h1 style="margin-left: 20px; margin-top: 20px;">All your monument just one click away!</h1>
-
 </div>
   <div class="row">
     <% @flats.each do |flat| %>
@@ -13,13 +11,11 @@
             <h2 class="mb-2"><%= flat.address%></h2>
             <p><strong>Capacity:</strong><%= flat.capacity %></p>
 
-
             <p><strong>Rating:</strong><%= flat.rating %></p>
             <div>
             <%= link_to "View Details", flat_path(flat), class: "btn btn-primary rounded mt-3"%>
           </div>
           <% if flat.user.photo.nil? %>
-
 
           <% else %>
             <%= image_tag flat.user.photo, class: "card-trip-user avatar-bordered" %>

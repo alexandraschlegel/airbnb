@@ -7,7 +7,11 @@
     <%= image_tag @flat.photo,class: "card-img-top", alt: "alttext" %>
     <div class="card-body">
       <h5 class="card-title">More details</h5>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "card-avatar", alt: "avatar" %>
+      <% if @flat.user.photo.nil? %>
+
+          <% else %>
+            <%= image_tag @flat.user.photo, class: "avatar", alt: “avatar” %>
+          <% end %>
       <p><strong>Address:</strong> <%= @flat.address %>
       <p><strong>Capacity:</strong> <%= @flat.capacity %>
 
