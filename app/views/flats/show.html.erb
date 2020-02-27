@@ -6,18 +6,22 @@
 
     <%= image_tag @flat.photo,class: "card-img-top", alt: "alttext" %>
     <div class="card-body">
-      <h5 class="card-title">Flat details</h5>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar", alt: "avatar" %>
+      <h5 class="card-title">More details</h5>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "card-avatar", alt: "avatar" %>
       <p><strong>Address:</strong> <%= @flat.address %>
       <p><strong>Capacity:</strong> <%= @flat.capacity %>
-      <p><strong>Price:</strong> <%= @flat.price %>
+
       <p><strong>Facilities:</strong> <%= @flat.facilities%>
       <p><strong>Rating</strong> <% @flat.rating.times do%>
       <i class="fas fa-star" style="color:gold;"></i>
       <% end %>
-      <div class="align-right">
-      <%= link_to "Go back to all flats", flats_path, class: "btn btn-primary" %>
-      <%= link_to "New booking", new_flat_booking_path(@flat.id), class: "btn btn-primary" %>
+      <div class="confirmation">
+        <div>
+          <%= link_to "Go back to all flats", flats_path, class: "btn btn-primary" %>
+          <%= link_to "New booking", new_flat_booking_path(@flat.id), class: "btn btn-primary" %>
+
+        </div>
+        <p><strong>Price: £</strong><strong><%= @flat.price %></strong>
       </div>
     </div>
   </div>
