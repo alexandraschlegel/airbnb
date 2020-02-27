@@ -2,6 +2,7 @@ class FlatsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
 
+
     if params[:query].present?
       @flats = Flat.search_by_address(params[:query])
     else
