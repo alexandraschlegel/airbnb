@@ -10,15 +10,15 @@
       <div class="card-trip-infos">
         <div>
 
-        <h2 class="mb-2"><%= flat.address%></h2>
+        <p class="mb-2"><%= flat.address%></p>
           <p><strong>Capacity:</strong><%= flat.capacity %></p>
 
-          <p><strong>Rating:</strong><%= flat.rating %></p
+          <p><strong>Rating:</strong><%= flat.rating %></p>
           <div>
           <%= link_to "View Details", flat_path(flat), class: "btn btn-primary rounded mt-3"%>
         </div>
         <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        <div class="price"><strong>Price: GBP</strong><strong><%= flat.price %></strong></p>
+        <div class="price"><strong>Price: GBP</strong><strong><%= flat.price %></strong>
 
         </div>
       </div>
