@@ -23,6 +23,15 @@
   opacity: .7;
   margin: 0;
 }
+.card-avatar{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 220px;
+    top: 367px;
+}
 
 
 .card-trip .card-trip-infos {
@@ -38,5 +47,11 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.card{
+  box-shadow: 5px 5px 5px light-grey;
+  border: 3px solid light-grey;
+  border-radius:10px;
 }
 
