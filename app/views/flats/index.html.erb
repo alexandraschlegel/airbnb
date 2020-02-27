@@ -11,15 +11,17 @@
             <h2 class="mb-2"><%= flat.address%></h2>
             <p><strong>Capacity:</strong><%= flat.capacity %></p>
 
+
+
             <p><strong>Rating</strong> <% flat.rating.times do%>
               <i class="fas fa-star" style="color:gold;"></i>
             <% end %>
+
 
             <div>
               <%= link_to "View Details", flat_path(flat), class: "btn btn-primary rounded mt-3"%>
             </div>
             <% if flat.user.photo.nil? %>
-
 
           <% else %>
             <%= image_tag flat.user.photo, class: "card-trip-user avatar-bordered" %>

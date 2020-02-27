@@ -8,7 +8,7 @@ puts "Creating users"
 elizabeth = User.create!(email: "elizabeth@hermajesty.com", password: 123456, photo:'Queeny.png')
 nemo = User.create!(email: "nemo@whereami.com", password:1234567, photo: 'nemo.jpg')
 sissi = User.create!(email: "sissi@wannabeaprincess.com",password: 12345678)
-flamingo = User.create!(email:"flamingo@pinkitwasloveatfirstsight.com",password:123456789, photo:'Flamingo.jpg')
+flamingo = User.create!(email:"flamingo@pinkitwasloveatfirstsight.com",password:123456789, photo:'flamingo.jpg')
 donald = User.create!(email:"donald@simplythebest.com",password:12345678910, photo:'donald')
 wladimir = User.create!(email:"wladimir@iheartponies.com",password:12345678910, photo:'wladimir.png')
 cleopatra = User.create!(email:"cleopatra@comingatcha.com",password:12345678910, photo:'cleopatra.jpg' )
