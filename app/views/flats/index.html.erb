@@ -1,16 +1,14 @@
-<div class="" style="padding: 25px 25px 25px 25px">
-  <h1 style="margin-left: 20px" style="margin-top: 20px">All your monuments just one click away!</h1>
+<div >
+  <h1 style="margin-left: 20px; margin-top: 20px;">All your monument just one click away!</h1>
 </div>
-
-<div class="row cards_for_index">
-  <% @flats.each do |flat| %>
+  <div class="row">
+    <% @flats.each do |flat| %>
     <div class="col-md-4">
       <div class="card-trip mb-2 p-3" style="border-radius:10px">
-        <%= image_tag "flamingo.jpg", alt: "Bolivian Salt Desert", width: 200%>
+        <%= image_tag flat.photo, width: 200%>
         <div class="card-trip-infos">
           <div>
             <h2 class="mb-2"><%= flat.address%></h2>
-
             <p><strong>Capacity:</strong><%= flat.capacity %></p>
 
             <p><strong>Rating</strong> <% flat.rating.times do%>
@@ -20,8 +18,12 @@
             <div>
               <%= link_to "View Details", flat_path(flat), class: "btn btn-primary rounded mt-3"%>
             </div>
-            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+            <% if flat.user.photo.nil? %>
 
+
+          <% else %>
+            <%= image_tag flat.user.photo, class: "card-trip-user avatar-bordered" %>
+          <% end %>
 
           </div>
               <div class="price">
@@ -32,3 +34,4 @@
     </div>
   <% end %>
 </div>
+
