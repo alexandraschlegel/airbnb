@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <%= render 'shared/navbar' %>
+     <%= render 'shared/navbar' if action_name != "home" %>
      <%= render 'shared/flashes' %>
      <style>
      /*@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap');*/
