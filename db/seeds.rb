@@ -18,7 +18,7 @@ elizabeth = User.create!(email: "elizabeth@hermajesty.com", password: 123456)
 
 # puts "Creating flats"
 flat1 = Flat.create!(name:'Taj Mahal',
-  address: 'Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001, India',
+  address: '1600 Pennsylvania Ave NW, Washington, DC 20500, United States',
   rating: 5,
   price: 400,
   capacity: 450,
@@ -26,14 +26,14 @@ flat1 = Flat.create!(name:'Taj Mahal',
   user: elizabeth,
   image: Cloudinary::Uploader.upload("app/assets/images/BuckinghamPalace.jpg")["public_id"])
 
-# flat2 = Flat.create!(name:'Buckingham Palace',
-#   address: 'Westminster, London SW1A 1AA',
-#   rating: 4,
-#   price: 190000,
-#   capacity: 1000,
-#   facilities: 'Ball room, Tea salon, Butler Service',
-#   user: elizabeth,
-#   image: 'BuckinghamPalace.jpg')
+ flat2 = Flat.create!(name:'Buckingham Palace',
+   address: 'Westminster, London SW1A 1AA',
+   rating: 4,
+   price: 190000,
+   capacity: 1000,
+   facilities: 'Ball room, Tea salon, Butler Service',
+   user: elizabeth,
+   image: Cloudinary::Uploader.upload("app/assets/images/BuckinghamPalace.jpg")["public_id"])
 
 # flat3 = Flat.create!(name:'The White House',
 #   address: '1600 Pennsylvania Ave NW, Washington, DC 20500, United States',
