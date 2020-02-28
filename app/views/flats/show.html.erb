@@ -1,24 +1,13 @@
-
-
-<div class="usercontainer">
-
-  <div class="card" style="width: 50rem;">
-
-    <div class="card-body" style="padding-bottom: 30px" >
-      <h5 class="card-title">More details</h5>
-      <% if @flat.photo.attached? %>
-        <%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
-      <% end %>
-      <% if @flat.user.photo.attached? %>
-        <%= cl_image_tag flat.user.photo.key, class: "avatar" %>
-      <% end %>
-      <p><strong>Name:</strong> <%= @flat.name %>
-      <p><strong>Address:</strong> <%= @flat.address %>
-      <p><strong>Capacity:</strong> <%= @flat.capacity %>
-
-      <p><strong>Facilities:</strong> <%= @flat.facilities%>
-      <p><strong>Rating</strong> <% @flat.rating&.times do%>
+<div class="card-trip-show">
+  <% if @flat.image.attached? %>
+    <%= cl_image_tag @flat.image.key, crop: :fill %>
+  <% end %>
+  <div class="card-trip-infos-show">
+    <h2 class="mb-2" style="width: 170px"><%= @flat.name%></h2>
+    <p><strong>Capacity:</strong><%= @flat.capacity %></p>
+    <p><strong>Rating</strong> <% @flat.rating&.times do%>
       <i class="fas fa-star" style="color:gold;"></i>
+
       <% end %>
       <div class="confirmation" style="padding-right: 30px">
         <div>
@@ -38,5 +27,17 @@
      height: 600px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+    <% end %>
+    <h2 class="card-trip-pricing-show"><strong>Price: £</strong><strong><%= @flat.price %></strong><strong>k</strong></h2>
+    <% if @flat.user.photo.attached? %>
+      <%= cl_image_tag @flat.user.photo.key, class: "card-trip-user-show avatar" %>
+    <% end %>
+  </div>
+  <div style="display: flex; justify-content: space-around; align-items: center">
+    <%= link_to "ALL ICONIC STAYS", flats_path, class: "btn btn-primary px-4"%>
+    <%= link_to "RESERVE", new_flat_booking_path(@flat), class: "btn btn-primary px-4"%>
+
   </div>
 </div>
+

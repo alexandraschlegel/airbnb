@@ -1,18 +1,18 @@
 <div class="container">
   <div>
-    <h1 style="margin-left: 20px; margin-top: 20px; margin-bottom: 25px">GREAt JOB</h1>
+    <h1 style="margin-left: 20px; margin-top: 20px; margin-bottom: 25px">All Iconic Stays</h1>
   </div>
   <div class="row">
     <% @flats.each do |flat| %>
     <div class="col-md-4">
       <div class="card-trip mb-3 p-3" style="border-radius:10px">
 
-        <% if flat.photo.attached? %>
-          <%= cl_image_tag flat.photo.key, height: 300, width: 400, crop: :fill %>
+        <% if flat.image.attached? %>
+          <%= cl_image_tag flat.image.key, height: 300, width: 400, crop: :fill %>
         <% end %>
         <div class="card-trip-infos">
           <div>
-            <h2 class="mb-2"><%= flat.name%></h2>
+            <h2 class="mb-2" style="width: 170px"><%= flat.name%></h2>
             <p><strong>Capacity:</strong><%= flat.capacity %></p>
             <p><strong>Rating</strong> <% flat.rating&.times do%>
               <i class="fas fa-star" style="color:gold;"></i>
@@ -21,7 +21,7 @@
               <%= link_to "View Details", flat_path(flat), class: "btn btn-primary rounded mt-3"%>
             </div>
           <% if flat.user.photo.attached? %>
-            <%= cl_image_tag flat.user.photo.key, class: "card-trip-user avatar-bordered" %>
+            <%= cl_image_tag flat.user.photo.key, class: "card-trip-user avatar"%>
           <% end %>
           </div>
           <div class="price">

@@ -4,11 +4,11 @@
         <div class="col-md-8">
           <div class="form-card-background">
             <h3 style="margin-top: 35px; font-size: 20px; font-family: 'open sans'"> Make a Reservation for: </h3>
-            <h4><%=@flat.address %></h4>
+            <h4><%=@flat.name %></h4>
             <%= simple_form_for [@flat, @booking] do |f| %>
                 <p><strong>Choose dates:</strong> <%= f.input :date_from %>
                 <p><strong>Choose dates:</strong> <%= f.input :date_to %>
-              <%= f.submit "Make a booking", class: "btn btn-primary mt-3" %>
+              <%= f.submit "Reserve now", class: "btn btn-primary mt-3" %>
             <% end %>
           </div><!-- end form-card-background -->
         </div>
