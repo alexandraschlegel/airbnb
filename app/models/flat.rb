@@ -2,7 +2,7 @@ class Flat < ApplicationRecord
   belongs_to :user
   has_many :bookings
   has_many :users, through: :bookings
-  has_one_attached :photo
+  has_one_attached :image
 
 
   validates :address, :price, :capacity, presence: true

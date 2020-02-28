@@ -24,17 +24,23 @@ flat1 = Flat.create!(name:'Taj Mahal',
   capacity: 450,
   facilities:'Tea room, Outdoor swimming pool',
   user: elizabeth,
-  image: Cloudinary::Uploader.upload("app/assets/images/BuckinghamPalace.jpg")["public_id"])
+)
 
-# flat2 = Flat.create!(name:'Buckingham Palace',
-#   address: 'Westminster, London SW1A 1AA',
-#   rating: 4,
-#   price: 190000,
-#   capacity: 1000,
-#   facilities: 'Ball room, Tea salon, Butler Service',
-#   user: elizabeth,
-#   image: 'BuckinghamPalace.jpg')
+upload = Cloudinary::Uploader.upload("app/assets/images/BuckinghamPalace.jpg")
+file = URI.open(upload["url"])
+flat1.image.attach(io: file, filename: upload["original_filename"] + "." + upload["format"], content_type: 'image/' + upload["format"])
 
+flat2 = Flat.create!(name:'Buckingham Palace',
+  address: 'Westminster, London SW1A 1AA',
+  rating: 4,
+  price: 190000,
+  capacity: 1000,
+  facilities: 'Ball room, Tea salon, Butler Service',
+  user: elizabeth)
+
+upload = Cloudinary::Uploader.upload("app/assets/images/buddah.jpeg")
+file = URI.open(upload["url"])
+flat2.image.attach(io: file, filename: upload["original_filename"] + "." + upload["format"], content_type: 'image/' + upload["format"])
 # flat3 = Flat.create!(name:'The White House',
 #   address: '1600 Pennsylvania Ave NW, Washington, DC 20500, United States',
 #   rating: 3,
