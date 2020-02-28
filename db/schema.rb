@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 2020_02_28_113145) do
     t.integer "towers"
     t.integer "moats"
     t.integer "draw_bridges"
-    t.string "photo"
     t.float "latitude"
     t.float "longitude"
     t.string "name"
