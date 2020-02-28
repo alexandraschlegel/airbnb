@@ -12,9 +12,10 @@
       <p class="price-font"><strong>Price: £</strong><strong><%= @flat.price %></strong>
     </div>
   </div>
+  <div class="mb-5" style="display: flex; justify-content: space-around; align-items: center">
+    <%= link_to "ALL ICONIC STAYS", flats_path, class: "btn btn-primary px-4"%>
+    <%= link_to "RESERVE", new_flat_booking_path(@flat), class: "btn btn-primary px-4"%>
+  </div>
 </div>
-<div style="display: flex; justify-content: space-around; align-items: center">
-  <%= link_to "ALL ICONIC STAYS", flats_path, class: "btn btn-primary px-4"%>
-  <%= link_to "RESERVE", new_flat_booking_path(@flat), class: "btn btn-primary px-4"%>
-</div>
+
 
