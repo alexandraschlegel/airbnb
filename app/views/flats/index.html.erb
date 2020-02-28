@@ -5,12 +5,15 @@
     <% @flats.each do |flat| %>
     <div class="col-md-4">
       <div class="card-trip mb-2 p-3" style="border-radius:10px">
-        <%= image_tag "louvre.jpg", width: 200%>
+
+        <% if flat.photo.attached? %>
+          <%= cl_image_tag flat.photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
         <div class="card-trip-infos">
           <div>
-            <h2 class="mb-2"><%= flat.name%></h2>
-            <p><strong>Capacity:                </strong><%= flat.capacity %></p>
-            <p><strong>Rating:    </strong> <% flat.rating.times do%>
+            <h2 class="mb-2"><%= flat.address%></h2>
+            <p><strong>Capacity:</strong><%= flat.capacity %></p>
+            <p><strong>Rating</strong> <% flat.rating&.times do%>
               <i class="fas fa-star" style="color:gold;"></i>
             <% end %>
 
@@ -19,14 +22,14 @@
               <%= link_to "View Details", flat_path(flat), class: "btn btn-primary rounded mt-3"%>
             </div>
 
-
-            <%#= image_tag flat.user.photo, class: "card-trip-user avatar-bordered" %>
-
+          <% if flat.user.photo.attached? %>
+            <%= cl_image_tag flat.user.photo.key, class: "card-trip-user avatar-bordered" %>
+          <% end %>
 
           </div>
-              <div class="price">
-                <strong>Price: £</strong><strong><%= flat.price %></strong><strong>k</strong>
-              </div>
+          <div class="price">
+            <strong>Price: £</strong><strong><%= flat.price %></strong><strong>k</strong>
+          </div>
         </div>
       </div>
     </div>

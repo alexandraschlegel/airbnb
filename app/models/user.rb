@@ -8,5 +8,6 @@ class User < ApplicationRecord
   has_many :flats
 
   validates :email, uniqueness: true
+  has_one_attached :photo
 
 end
