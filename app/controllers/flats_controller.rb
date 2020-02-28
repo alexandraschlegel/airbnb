@@ -24,9 +24,11 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flats_params)
+    @flat.user = current_user
     if @flat.save
       redirect_to flat_path(@flat)
     else
+    raise
       render :new
     end
   end
@@ -41,11 +43,10 @@ class FlatsController < ApplicationController
     redirect_to flat_path(@flat)
   end
 
-
   private
-  def flats_params
-    params.require(:flat).permit(:address, :price, :capacity)
 
+  def flats_params
+    params.require(:flat).permit(:address, :price, :capacity, :rating, :facilities, :photo)
   end
 
 

@@ -7,13 +7,16 @@
 
     <div class="card-body">
       <h5 class="card-title">More details</h5>
+      <% if @flat.photo.attached? %>
+        <%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
 
+      <% end %>
 
       <p><strong>Address:</strong> <%= @flat.address %>
       <p><strong>Capacity:</strong> <%= @flat.capacity %>
 
       <p><strong>Facilities:</strong> <%= @flat.facilities%>
-      <p><strong>Rating</strong> <% @flat.rating.times do%>
+      <p><strong>Rating</strong> <% @flat.rating&.times do%>
       <i class="fas fa-star" style="color:gold;"></i>
       <% end %>
       <div class="confirmation">
