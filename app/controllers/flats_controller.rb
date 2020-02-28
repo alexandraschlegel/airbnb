@@ -1,8 +1,6 @@
 class FlatsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-
-
     if params[:query].present?
       @flats = Flat.search_by_address(params[:query])
     else
@@ -16,6 +14,10 @@ class FlatsController < ApplicationController
   def show
     @flat = Flat.find(params[:id])
     # raise
+    #Added code EA-28/02
+    @markers = [ { lng: @flat.latitude, lat: @flat.longitude } ]
+
+    #raise
   end
 
   def new
@@ -28,7 +30,6 @@ class FlatsController < ApplicationController
     if @flat.save
       redirect_to flat_path(@flat)
     else
-    raise
       render :new
     end
   end
