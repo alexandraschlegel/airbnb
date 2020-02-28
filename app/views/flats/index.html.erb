@@ -1,10 +1,11 @@
 <div >
-  <h1 style="margin-left: 20px; margin-top: 20px;">All your monument just one click away!</h1>
+  <h1 style="margin-left: 20px; margin-top: 20px; margin-bottom: 25px">Coding sucks</h1>
 </div>
   <div class="row">
     <% @flats.each do |flat| %>
     <div class="col-md-4">
       <div class="card-trip mb-2 p-3" style="border-radius:10px">
+
         <% if flat.photo.attached? %>
           <%= cl_image_tag flat.photo.key, height: 300, width: 400, crop: :fill %>
         <% end %>
@@ -20,14 +21,15 @@
             <div>
               <%= link_to "View Details", flat_path(flat), class: "btn btn-primary rounded mt-3"%>
             </div>
+
           <% if flat.user.photo.attached? %>
             <%= cl_image_tag flat.user.photo.key, class: "card-trip-user avatar-bordered" %>
           <% end %>
 
           </div>
-              <div class="price">
-                <strong>Price: £</strong><strong><%= flat.price %></strong>
-              </div>
+          <div class="price">
+            <strong>Price: £</strong><strong><%= flat.price %></strong><strong>k</strong>
+          </div>
         </div>
       </div>
     </div>

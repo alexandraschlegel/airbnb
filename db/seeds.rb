@@ -4,6 +4,7 @@ Booking.destroy_all
 Flat.destroy_all
 User.destroy_all
 
+
 # puts "Creating users"
 # elizabeth = User.create!(email: "elizabeth@hermajesty.com", password: 123456, photo:'Queeny.png')
 # nemo = User.create!(email: "nemo@whereami.com", password:1234567, photo: 'nemo.jpg')
@@ -146,5 +147,4 @@ User.destroy_all
 # booking1 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:elizabeth, flat:flat1)
 # booking2 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:donald, flat:flat2)
 # booking3 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:wladimir, flat:flat3)
-
 
