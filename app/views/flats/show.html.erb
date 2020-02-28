@@ -6,11 +6,11 @@
 
     <div class="card-body" style="padding-bottom: 30px" >
       <h5 class="card-title">More details</h5>
-      <% if @flat.photo.attached? %>
-        <%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
+      <% if @flat.image.attached? %>
+        <%= cl_image_tag @flat.image.key, height: 300, crop: :fill %>
       <% end %>
       <% if @flat.user.photo.attached? %>
-        <%= cl_image_tag flat.user.photo.key, class: "avatar" %>
+        <%= cl_image_tag @flat.user.photo.key, class: "avatar" %>
       <% end %>
       <p><strong>Name:</strong> <%= @flat.name %>
       <p><strong>Address:</strong> <%= @flat.address %>
