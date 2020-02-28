@@ -53,7 +53,7 @@ flat1 = Flat.create!(name:'Taj Mahal',
   address: 'Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001, India',
   rating: 5,
   price: 400,
-  capacity: 450,
+  capacity: 450 ,
   facilities:'Tea room, Outdoor swimming pool',
   user: elizabeth,
 )
@@ -65,7 +65,7 @@ flat1.image.attach(io: file, filename: upload["original_filename"] + "." + uploa
 flat2 = Flat.create!(name:'Buckingham Palace',
   address: 'Westminster, London SW1A 1AA',
   rating: 4,
-  price: 190000,
+  price: 190,
   capacity: 1000,
   facilities: 'Ball room, Tea salon, Butler Service',
   user: elizabeth)
@@ -77,7 +77,7 @@ flat2.image.attach(io: file, filename: upload["original_filename"] + "." + uploa
 flat3 = Flat.create!(name:'The White House',
   address: '1600 Pennsylvania Ave NW, Washington, DC 20500, United States',
   rating: 3,
-  price: 210000,
+  price: 210,
   capacity: 1200,
   facilities:'Conference room, Helipad, Panic Room',
   user: donald)
@@ -89,7 +89,7 @@ flat3.image.attach(io: file, filename: upload["original_filename"] + "." + uploa
 flat4 = Flat.create!(name:'Schloss Neuschwanstein',
   address: 'Neuschwansteinstraße 20, 87645 Schwangau, Germany',
   rating: 3,
-  price: 10200,
+  price: 102,
   capacity: 1000,
   facilities:'Ball Room, Tourture Chamber',
   user:sissi)
@@ -101,7 +101,7 @@ flat4.image.attach(io: file, filename: upload["original_filename"] + "." + uploa
   flat5 = Flat.create!(name:'Great Barrier Reef',
     address: '24 The Cove Rd, Airlie Beach QLD 4802, Australia',
     rating: 4,
-    price: 40000,
+    price: 400,
     capacity: 1000,
     facilities:'Free snorkel equipment included',
     user:nemo)
@@ -114,7 +114,7 @@ flat4.image.attach(io: file, filename: upload["original_filename"] + "." + uploa
   flat6 = Flat.create!(name:'Pentagon',
     address: 'Washington, DC 22202, United States',
     rating: 1,
-    price: 30000,
+    price: 30,
     capacity: 9000,
     facilities:'Panic room, Secret Tunnel, Professional security system',
     user:donald)
@@ -127,8 +127,8 @@ flat4.image.attach(io: file, filename: upload["original_filename"] + "." + uploa
   flat7 = Flat.create!(name:'The great wall of China',
     address:'Huairou District, China',
     rating: 2,
-    price: 1200,
-    capacity: 1000,
+    price: 120,
+    capacity: 3000,
     facilities:'Wonderful walking track',
     user:wladimir)
 
@@ -140,7 +140,7 @@ flat4.image.attach(io: file, filename: upload["original_filename"] + "." + uploa
   flat8 = Flat.create!(name:'Moscow Kremlin',
     address: 'Moscow, Russia, 103073',
     rating: 3,
-    price: 1200,
+    price: 12,
     capacity: 1000,
     facilities:'Secret Tunnel, Spiral Staircase, Magic Room',
     user:wladimir)
@@ -152,8 +152,8 @@ flat4.image.attach(io: file, filename: upload["original_filename"] + "." + uploa
   flat9 = Flat.create!(name:'Bolivian Sea Desert',
     address: 'Daniel Campos Province',
     rating: 3,
-    price: 1200,
-    capacity: 1000,
+    price: 120,
+    capacity:8000,
     facilities: 'Flamingos, Fresh and Saltwater Pool, 365 Days of Sun, Spacious Outdoor space',
     user:flamingo)
 
@@ -165,7 +165,7 @@ flat4.image.attach(io: file, filename: upload["original_filename"] + "." + uploa
   flat10 = Flat.create!(name:'Maccu Piccu',
     address:'08680, Peru',
     rating: 4,
-    price: 1200,
+    price: 120,
     capacity: 1000,
     facilities:'Wonderful walking track for the keen hiker, Spectular view, Back to Nature Experience',
     user:flamingo)
@@ -178,7 +178,7 @@ flat4.image.attach(io: file, filename: upload["original_filename"] + "." + uploa
 flat11 = Flat.create!(name:'Eiffel Tower',
   address: 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France',
   rating: 2,
-  price: 1200,
+  price: 120,
   capacity: 1000,
   facilities:'Airy, Great City Views',
   user:monalisa)
@@ -191,7 +191,7 @@ flat11.image.attach(io: file, filename: upload["original_filename"] + "." + uplo
 flat12 = Flat.create!(name:'Statue of Liberty',
   address: 'New York, NY 10004, United States',
   rating: 2,
-  price: 1200,
+  price: 120,
   capacity: 1000,
   facilities:'Skyline views',
   user:donald)
@@ -204,7 +204,7 @@ flat12.image.attach(io: file, filename: upload["original_filename"] + "." + uplo
 flat13 = Flat.create!(name:'Louvre',
   address: 'Rue de Rivoli, 75001 Paris, France',
   rating: 3,
-  price: 1200,
+  price: 120,
   capacity: 60000,
   facilities:'Acclaimed International Art',
   user:monalisa)
@@ -215,7 +215,7 @@ flat13.image.attach(io: file, filename: upload["original_filename"] + "." + uplo
 
 
 # puts "Creating bookings"
-# booking1 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:elizabeth, flat:flat1)
-# booking2 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:donald, flat:flat2)
-# booking3 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:wladimir, flat:flat3)
+# booking1 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:wladimir, flat:flat3)
+# booking2 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:wladimir, flat:flat3)
+# booking3 = Booking.create!(date_from: Time.now, date_to: Time.now + 3000 , user:wwladimir, flat:flat3)
 

@@ -1,8 +1,7 @@
 class BookingsController < ApplicationController
 
   def index
-    @flat = Flat.find(params[:flat_id])
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
   end
 
   def new
