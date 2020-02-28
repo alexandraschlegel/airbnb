@@ -3,25 +3,23 @@
       <h1>Your Reservation Confirmation</h1>
       <div class="t-title">
         <h2><%= @flat.name %></h2>
+        <span>Name</span>
       </div>
       <div class="t-name">
-        <span>Email</span>
         <h2><%= current_user.email %></h2>
-
-      </div>
-      <div class="t-number">
-        <strong>From:</strong> <%= @booking.date_from %> <strong>&nbsp&nbspTo:</strong> <%= @booking.date_to %>
-        <span></span>
+        <span>Email</span>
       </div>
 
     </div>
     <div class="t-card t-cardRight">
-
+      <div class="t-number">
+        <%= @booking.date_from %>
+        <span></span>
+      </div>
       <div class="t-barcode"></div>
     </div>
 
     <%= link_to "All Iconic Stays", flats_path, class: "btn btn-primary rounded mt-5"%>
     <%= link_to "Edit Reservation",  edit_flat_booking_path(@flat, @booking) , class: "btn btn-primary rounded mt-5"%>
     <%= link_to "See All Reservations",  flat_bookings_path(@flat), class: "btn btn-primary rounded mt-5"%>
-
   </div>

@@ -7,8 +7,8 @@
     <div class="col-md-4">
       <div class="card-trip mb-3 p-3" style="border-radius:10px">
 
-        <% if flat.photo.attached? %>
-          <%= cl_image_tag flat.photo.key, height: 300, width: 400, crop: :fill %>
+        <% if flat.image.attached? %>
+          <%= cl_image_tag flat.image.key, height: 300, width: 400, crop: :fill %>
         <% end %>
         <div class="card-trip-infos">
           <div>
