@@ -1,6 +1,14 @@
+.navbar--logo {
+  margin-left:20px;
+}
+
+.navbar--logo img {
+  width: 200px;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #444444;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,3 +18,26 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-link {
+  color: rgba(0, 0, 0, 0.9);
+    margin-top: 19px;
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link  {
+  color: #ffffff!important;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffffff;
+}
+
+.nav-link {
+    margin-top: 11px;
+    margin-right:20px;
+  }
+
+

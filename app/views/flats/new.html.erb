@@ -1,12 +1,15 @@
+<%#= cl_image_tag(Flat.first.image, width: 400, height: 800, crop: :fill) %>
+
 <div class="container">
   <div class= "row justify-content-around">
     <div class="col-6">
-      <%= simple_form_for(flat) do |f| %>
+      <%= simple_form_for(@flat) do |f| %>
         <p><strong>Address:</strong><%= f.input :address %>
         <p><strong>Capacity:</strong> <%= f.input :capacity %>
         <p><strong>Price:</strong><%= f.input :price %>
         <p><strong>Rating:</strong><%= f.input :rating %>
         <p><strong>Facilities:</strong><%= f.input :facilities %>
+        <%= f.input :photo, as: :file %>
        <%= f.submit "Add a new flat", class: "btn btn-primary"  %>
       <% end %>
     </div>

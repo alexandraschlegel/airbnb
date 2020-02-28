@@ -1,3 +1,11 @@
+.row .card-trip::first-child {
+  margin-left:20px;
+}
+
+.row .card-trip::last-child {
+  margin-right:20px;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
@@ -53,5 +61,9 @@
   box-shadow: 5px 5px 5px light-grey;
   border: 3px solid light-grey;
   border-radius:10px;
+}
+
+.price{
+  font-family: Cinzel Decorative;
 }
 

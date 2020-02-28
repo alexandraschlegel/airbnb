@@ -2,26 +2,31 @@
 
 <div class="usercontainer">
 
-  <div class="card" style="width: 40rem;">
+  <div class="card" style="width: 50rem;">
 
-    <%= image_tag "flatone.jpg",class: "card-img-top", alt: "alttext" %>
-    <div class="card-body">
+    <div class="card-body" style="padding-bottom: 30px" >
       <h5 class="card-title">More details</h5>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "card-avatar", alt: "avatar" %>
+      <% if @flat.photo.attached? %>
+        <%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+      <% if @flat.user.photo.attached? %>
+        <%= cl_image_tag flat.user.photo.key, class: "avatar" %>
+      <% end %>
+      <p><strong>Name:</strong> <%= @flat.name %>
       <p><strong>Address:</strong> <%= @flat.address %>
       <p><strong>Capacity:</strong> <%= @flat.capacity %>
 
       <p><strong>Facilities:</strong> <%= @flat.facilities%>
-      <p><strong>Rating</strong> <% @flat.rating.times do%>
+      <p><strong>Rating</strong> <% @flat.rating&.times do%>
       <i class="fas fa-star" style="color:gold;"></i>
       <% end %>
-      <div class="confirmation">
+      <div class="confirmation" style="padding-right: 30px">
         <div>
-          <%= link_to "Go back to all flats", flats_path, class: "btn btn-primary" %>
-          <%= link_to "New booking", new_flat_booking_path(@flat.id), class: "btn btn-primary" %>
+          <%= link_to "ALL   ICONS", flats_path, class: "btn btn-primary px-4 mr-3" %>
+          <%= link_to "BOOK NOW", new_flat_booking_path(@flat.id), class: "btn btn-primary px-4" %>
 
         </div>
-        <p><strong>Price: £</strong><strong><%= @flat.price %></strong>
+        <p class="price-font"><strong>Price: £</strong><strong><%= @flat.price %></strong>
       </div>
     </div>
   </div>
