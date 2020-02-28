@@ -1,6 +1,6 @@
   <div class="t-cardWrap">
     <div class="t-card t-cardLeft">
-      <h1>Your Monument Booking Ticket</h1>
+      <h1>Your Reservation Confirmation</h1>
       <div class="t-title">
         <h2><%= @flat.name %></h2>
         <span>Name</span>
@@ -19,8 +19,7 @@
       <div class="t-barcode"></div>
     </div>
 
-  <%= link_to "Go back to all flats", flats_path, class: "btn btn-primary rounded mt-5"%>
-  <%= link_to "Edit booking",  edit_flat_booking_path(@flat, @booking) , class: "btn btn-primary rounded mt-5"%>
-  <%= link_to "See all previous bookings",  flat_bookings_path(@flat) , class: "btn btn-primary rounded mt-5"%>
-
+    <%= link_to "All Iconic Stays", flats_path, class: "btn btn-primary rounded mt-5"%>
+    <%= link_to "Edit Reservation",  edit_flat_booking_path(@flat, @booking) , class: "btn btn-primary rounded mt-5"%>
+    <%= link_to "See All Reservations",  flat_bookings_path(@flat), class: "btn btn-primary rounded mt-5"%>
   </div>

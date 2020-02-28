@@ -17,16 +17,16 @@
       <p><strong>Capacity:</strong> <%= @flat.capacity %>
 
       <p><strong>Facilities:</strong> <%= @flat.facilities%>
-      <p><strong>Rating</strong> <% @flat.rating&.times do%>
+      <p><strong>Rating:</strong> <% @flat.rating&.times do%>
       <i class="fas fa-star" style="color:gold;"></i>
       <% end %>
       <div class="confirmation" style="padding-right: 30px">
         <div>
-          <%= link_to "ALL   ICONS", flats_path, class: "btn btn-primary px-4 mr-3" %>
-          <%= link_to "BOOK NOW", new_flat_booking_path(@flat.id), class: "btn btn-primary px-4" %>
+          <%= link_to "ALL ICONIC STAYS", flats_path, class: "btn btn-primary px-4 mr-3" %>
+          <%= link_to "RESERVE NOW", new_flat_booking_path(@flat.id), class: "btn btn-primary px-4" %>
 
         </div>
-        <p class="price-font"><strong>Price: £</strong><strong><%= @flat.price %></strong>
+        <p class="price"><strong>Price: £</strong><strong><%= @flat.price %></strong>
       </div>
     </div>
   </div>

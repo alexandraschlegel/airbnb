@@ -1,34 +1,26 @@
 <div class="t-cardWrap">
-    <h1>All your previous bookings</h1>
-    <div class="t-card t-cardLeft">
-      <h1> bookings</h1>
-      <div class="t-title">
-        <h2><%= @flat.name %></h2>
-        <div class="row">
-           <% @bookings.each do |booking| %>
-            <div class="col-md-6">
+  <div class="t-card t-cardLeft">
+    <h1>All your Reservations</h1>
+        <% @bookings.each do |booking| %>
 
-              <div class="t-cardWrap">
-              <div class="t-card t-cardLeft">
-             <h1>Your Monument Booking Ticket</h1>
-      <div class="t-title">
-        <h2><%= @flat.name %></h2>
-        <span>Name</span>
-      </div>
-      <div class="t-name">
-        <h2><%= current_user.email %></h2>
-        <span>Email</span>
-      </div>
+    <div class="t-title">
+      <h2><%= @booking.flat.name %></h2>
+    </div>
+    <div class="t-name">
+      <span>Email</span>
+      <h2><%= current_user.email %></h2>
 
     </div>
-    <div class="t-card t-cardRight">
-      <div class="t-number">
-        <%= @booking.date_from %>
-        <span></span>
-      </div>
-      <div class="t-barcode"></div>
+    <div class="t-number">
+      <strong>From:</strong> <%= @booking.flat.date_from %> <strong>&nbsp&nbspTo:</strong> <%= @booking.flat.date_to %>
+      <span></span>
     </div>
-
-  <%= link_to "Go back to all flats", flats_path, class: "btn btn-primary rounded mt-5"%>
 
   </div>
+  <div class="t-card t-cardRight">
+
+    <div class="t-barcode"></div>
+  </div>
+<% end %>
+<%= link_to "All Iconic Stays", flats_path, class: "btn btn-primary rounded mt-5"%>
+</div>
