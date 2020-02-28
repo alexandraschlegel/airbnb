@@ -19,11 +19,11 @@
       <% end %>
       <div class="confirmation" style="padding-right: 30px">
         <div>
-          <%= link_to "ALL FINE STAYS", flats_path, class: "btn btn-primary px-4 mr-3" %>
+          <%= link_to "ALL   ICONS", flats_path, class: "btn btn-primary px-4 mr-3" %>
           <%= link_to "BOOK NOW", new_flat_booking_path(@flat.id), class: "btn btn-primary px-4" %>
 
         </div>
-        <p><strong>Price: £</strong><strong><%= @flat.price %></strong>
+        <p class="price-font"><strong>Price: £</strong><strong><%= @flat.price %></strong>
       </div>
     </div>
   </div>

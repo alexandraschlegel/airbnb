@@ -1,12 +1,12 @@
 $t-red: #8B2F97;
-$t-grey: #ecedef;
+$t-grey: #fdfdfd;
 $t-black: #343434;
 
 .t-cardWrap {
-  width: 30.5em;
+  width: 38em;
   margin: 3em auto;
   color: #fff;
-  font-family: Cinzel Decorative;
+  font-family: "Open Sans";
 }
 
 .t-card {
@@ -19,7 +19,7 @@ $t-black: #343434;
   h1 {
     font-size: 1.1em;
     margin-top: 0;
-    font-family: Cinzel Decorative;
+    font-family: "Open Sans";
     span {
       font-weight: normal;
     }
@@ -29,11 +29,11 @@ $t-black: #343434;
 .t-cardLeft {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  width: 22em;
+  width: 26em;
 }
 
 .t-cardRight {
-  width: 8.5em;
+  width: 11.5em;
   border-left: .18em dashed #fff;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -57,11 +57,12 @@ $t-black: #343434;
 }
 
 .t-title, .t-name, .t-seat, .t-time {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-weight: normal;
   h2 {
-    font-size: .9em;
-    color: #525252;
+    font-size: 2em;
+    color: #8B2F97;
+    // color: #525252;
     margin: 0;
    }
   span {
@@ -72,10 +73,18 @@ $t-black: #343434;
 
 .t-title {
   margin: 2em 0 0 0;
+
 }
 
 .t-name, .t-seat {
   margin: .7em 0 0 0;
+  font-size: 0.8em;
+}
+
+.t-name h2 {
+  font-size: 18px;
+  font-family: "Open Sans";
+  color:#525252;
 }
 
 .t-time {
@@ -87,13 +96,14 @@ $t-black: #343434;
 }
 
 .t-number {
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
+  margin-top:10px;
   h3 {
     color: $red;
     margin: .9em 0 0 0;
     font-size: 2.5em;
-    font-family: Cinzel Decorative;
+    font-family:"Cinzel Decorative", "Helvetica", "sans-serif";
 
   }
   span {
@@ -102,10 +112,14 @@ $t-black: #343434;
   }
 }
 
+.t-number {
+  color: #525252!important;
+}
+
 .t-barcode {
-  height: 2em;
+  height: 3em;
   width: 0;
-  margin: 1.2em 0 0 .8em;
+  margin: 4em 0 0 1.8em;
   box-shadow: 1px 0 0 1px $t-black,
   5px 0 0 1px $t-black,
   10px 0 0 1px $t-black,

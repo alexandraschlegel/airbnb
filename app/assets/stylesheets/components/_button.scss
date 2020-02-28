@@ -44,12 +44,17 @@
   color: white;
 }
 
-.custom-button{
+.custom-button {
   width: 30%;
   border-radius: 20px;
 }
 
-// .btn btn-primary-btn{
-//   font-family: Cinzel Decorative;
-//   border-radius: 5px;
-// }
+.btn {
+  // font-family: Cinzel Decorative;
+    padding: 0.5rem 0.9rem !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+    border-radius: 30px !important;
+    color: #ffffff !important;
+    background-color: #8B2F97 !important;
+}
